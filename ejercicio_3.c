@@ -15,7 +15,11 @@ int main() {
     scanf("%d", &num);
     enteroABinario(num, bin);
     printf("Binario: %s\n", bin);
-
+    for (p=bin; *p != 0 ; p++) {
+        if (*p == '1') {
+            unos++;
+        }
+    }
     // --- TU CÓDIGO AQUÍ ---
     // Usa 'p' para recorrer 'bin' y contar los '1's
 
