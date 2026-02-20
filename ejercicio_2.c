@@ -36,12 +36,15 @@ int main() {
     for (int i = 2; i < total; i++) {
         int *actual = (ptr + i);
         
-        // --- TU CÓDIGO AQUÍ ---
-        // Caso A: Si *actual es mayor que *max1...
-        //         max2 toma el valor de max1, y max1 apunta al actual.
-        // Caso B: Si *actual es mayor que *max2 (pero menor que max1)...
-        //         max2 apunta al actual.
-        // -----------------------
+        if (*actual > *max1) {
+        // Caso A: actual es el nuevo máximo
+        max2 = max1;
+        max1 = actual;
+    }
+    else if (*actual > *max2) {
+        // Caso B: actual es el segundo máximo
+        max2 = actual;
+    }
     }
 
     // 3. Cálculo de distancia
